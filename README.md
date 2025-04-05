@@ -7,7 +7,7 @@
 
 ![](https://img.shields.io/badge/cool-useless-green.svg)
 [![CRAN](https://www.r-pkg.org/badges/version/picosatire)](https://CRAN.R-project.org/package=picosatire)
-[![R-CMD-check](https://github.com/coolbutuseless/picosatire-dev/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/coolbutuseless/picosatire-dev/actions/workflows/R-CMD-check.yaml)
+[![R-CMD-check](https://github.com/coolbutuseless/picosatire/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/coolbutuseless/picosatire/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 `{picosatire}` is a SAT solver for R using the
