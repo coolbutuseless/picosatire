@@ -1,0 +1,34 @@
+Package: picosatire
+Type: Package
+Title: SAT Solver using 'PicoSAT'
+Version: 1.0.0
+Authors@R: c(
+    person("Mike", "Cheng", role = c("aut", "cre", 'cph'), email = "mikefc@coolbutuseless.com"),
+    person("Dirk", "Schumacher", email = "mail@dirk-schumacher.net", role = c("aut", "cph"), comment = "Fixes for original picosat.c in rpicosat package"),
+    person("Armin", "Biere", role = c("aut", "cph"), comment = "Author and copyright holder of included PicoSAT code")
+    )
+Maintainer: Mike Cheng <mikefc@coolbutuseless.com>
+URL: https://github.com/coolbutuseless/picosatire
+BugReports: https://github.com/coolbutuseless/picosatire/issues
+Description: A solver for Boolean satisfiability problems ('SAT') using the
+    'PicoSAT' library.  For this solver, 'SAT' problems can be formulated in 
+    two ways; using integer literals, or using logical expressions 
+    specified with the 'satire' package.
+License: MIT + file LICENSE
+Encoding: UTF-8
+RoxygenNote: 7.3.2
+Imports:
+  satire
+Suggests: 
+    knitr,
+    glue,
+    purrr,
+    ggplot2,
+    rmarkdown,
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+Copyright: The included 'PicoSAT' code is Copyright (c) Armin Biere, Johannes 
+    Kepler University. See 'COPYRIGHTS' file for LICENSE for included code.
+Remotes:
+  coolbutuseless/satire
+VignetteBuilder: knitr
