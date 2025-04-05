@@ -341,7 +341,7 @@ sat_card_exactly_k(sat, black, 5)
 sat
 ```
 
-However, attemping to solve with 5 queens of each color returns `NULL` - this
+However, attempting to solve with 5 queens of each color returns `NULL` - this
 indicates that the problem is unsatisfiable i.e. impossible!
 ```{r}
 pico_solve_satire(sat)
@@ -357,7 +357,10 @@ sat_add_exprs(sat, all_exprs)
 sat_card_exactly_k(sat, white, 4)
 sat_card_exactly_k(sat, black, 4)
 
-sol <- pico_solve_satire(sat)
+# Solve the problem.
+# Remove some variables from the output as they are dummy, temporary or
+# indicator variables.  This helps in removing duplicate solutions.
+sol <- pico_solve_satire(sat, remove = "^dummy|row|col|up|down")
 sol
 ```
 
@@ -368,7 +371,6 @@ variables which are TRUE
 
 ```{r echo=FALSE}
 ss <- names(sol)[unlist(sol)]
-ss <- grep("^(w|b)\\d+", ss, value = TRUE)
 ss
 ```
 

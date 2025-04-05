@@ -4,7 +4,7 @@
 \alias{pico_solve_satire}
 \title{Solve simple using 'satire'}
 \usage{
-pico_solve_satire(sat, max_solutions = 1, keep_dummy = FALSE)
+pico_solve_satire(sat, max_solutions = 1, remove = "^dummy")
 }
 \arguments{
 \item{sat}{SAT problem definition as created by \code{satire::sat_new()} or
@@ -12,8 +12,11 @@ pico_solve_satire(sat, max_solutions = 1, keep_dummy = FALSE)
 
 \item{max_solutions}{limit number of solutions}
 
-\item{keep_dummy}{should variables starting with the prefix 'dummy' be 
-dropped from the solution?  Default: FALSE}
+\item{remove}{regular expression for variables to remove when blocking solutions
+and assembling values to return. Default: "^dummy" will block all
+variables starting with the word "dummy" (as this is how the 'satire' 
+package automatically creates dummy variables.)
+If NULL no variables will be removed.}
 }
 \value{
 Return NULL is problem is unsatisfiable.  Otherwise return a data.frame
