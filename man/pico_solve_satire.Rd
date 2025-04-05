@@ -4,13 +4,16 @@
 \alias{pico_solve_satire}
 \title{Solve simple using 'satire'}
 \usage{
-pico_solve_satire(sat, max_solutions = 1)
+pico_solve_satire(sat, max_solutions = 1, keep_dummy = FALSE)
 }
 \arguments{
 \item{sat}{SAT problem definition as created by \code{satire::sat_new()} or
 \code{satire::read_dimacs()}}
 
 \item{max_solutions}{limit number of solutions}
+
+\item{keep_dummy}{should variables starting with the prefix 'dummy' be 
+dropped from the solution?  Default: FALSE}
 }
 \value{
 Return NULL is problem is unsatisfiable.  Otherwise return a data.frame

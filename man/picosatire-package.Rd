@@ -19,9 +19,9 @@ Useful links:
 \author{
 \strong{Maintainer}: Mike Cheng \email{mikefc@coolbutuseless.com} [copyright holder]
 
-Other contributors:
+Authors:
 \itemize{
-  \item Dirk Schumacher \email{mail@dirk-schumacher.net} (Fixes for original picosat.c) [contributor]
+  \item Dirk Schumacher \email{mail@dirk-schumacher.net} (Fixes for original picosat.c in rpicosat package) [copyright holder]
   \item Armin Biere (Author and copyright holder of included PicoSAT code) [copyright holder]
 }
 
